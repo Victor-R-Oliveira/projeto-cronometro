@@ -29,12 +29,12 @@ def contar():
         minutos = (contador % 3600) // 60
         segundos = contador % 60
         
-        
         tempo = f'{horas:02}:{minutos:02}:{segundos:02}'
         
-        
         label_tempo['text'] = tempo
-        
+        if horas > 99:
+            tempo = '00:00:00'
+            label_tempo['text'] = tempo
         
         janela.after(1000, contar)
 
