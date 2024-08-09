@@ -7,7 +7,7 @@ janela.geometry('360x360')
 janela.title('Cornômetro')
 janela.config(bg = cor_de_fundo)
 janela.resizable(width=False, height=False)
-janela.iconphoto(False, PhotoImage(file='cronometro.png'))
+janela.iconphoto(False, PhotoImage(file='imagens/cronometro.png'))
 
 tempo ='00:00:00'
 rodar = False
@@ -23,7 +23,7 @@ def contar():
     global contador, tempo, rodar
     
     if rodar:
-        
+
         contador += 1
         horas = contador // 3600
         minutos = (contador % 3600) // 60
